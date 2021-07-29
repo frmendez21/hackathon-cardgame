@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './signup_form.css'
 
 const SignupForm = ({errors, signup}) => {
     const [userInfo, setUserInfo] = useState({});
@@ -26,15 +27,15 @@ const SignupForm = ({errors, signup}) => {
     };
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className="signup-form" onSubmit={handleSubmit}>
             <input type="text" onChange={e => update(e, 'username')} placeholder="username"/>
-            {errors.username && errorState.username}
-            <input type="text" onChange={e => update(e, 'email')} placeholder="email"/>
-            {errors.email && errorState.email}
-            <input type="text" onChange={e => update(e, 'password')} placeholder="password"/>
-            {errors.password && errorState.password}
-            <input type="text" onChange={e => update(e, 'password2')} placeholder="confirm password"/>
-            {errors.password2 && errorState.password2}
+            {errors.username && <p id="error">{errorState.username}</p>}
+            <input type="text" onChange={e => update(e, 'email')} placeholder="email" autoComplete="username"/>
+            {errors.email && <p id="error">{errorState.email}</p>}
+            <input type="password" onChange={e => update(e, 'password')} placeholder="password" autoComplete="new-password"/>
+            {errors.password && <p id="error">{errorState.password}</p>}
+            <input type="password" onChange={e => update(e, 'password2')} placeholder="confirm password" autoComplete="new-password"/>
+            {errors.password2 && <p id="error">{errorState.password2}</p>}
             <button type="submit">Submit</button>
         </form>
     )

@@ -1,18 +1,22 @@
 import React, {} from 'react';
 import {Link} from 'react-router-dom';
-
-const Navbar = ({loggedIn, logout}) => {
-
+import './navbar.css'
+const Navbar = ({loggedIn, logout, currentUser}) => {
     const links = loggedIn ? 
-        <div>
-            <button onClick={() => logout()}>Logout</button>
+        <div className='session-btns'>
+            <p id="username">user: {currentUser.username}</p>
+            <button id="session-btn" onClick={() => logout()}>Logout</button>
         </div> : 
-        <div>
-            <Link to={'/signup'}>Signup</Link>
-            <Link to={'/login'}>Login</Link>
+        <div className="session-btns">
+            <Link id="session-btn" to={'/signup'}>Signup</Link>
+            <Link id="session-btn" to={'/login'}>Login</Link>
         </div>
+
     return(
-        <div>
+        <div className="navbar">
+            <Link id="home" to={"/"}>Home</Link>
+            <Link to={"/game"}>Game</Link>
+            <h3 id="header">CardGame</h3>
             {links}
         </div>
     )

@@ -1,0 +1,38 @@
+.navbar {
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: 98%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 10% 10% 50% 20%;
+}
+.session-btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#session-btn {
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+#username {
+    font-size: 16px;
+    margin: auto 0;
+}
+
+#home {
+    font-size: 18px;
+}
+
+ #header {
+    text-align: center;
+    font-size: 18px;
+    margin: auto 0;
+}
+a {
+    height: inherit;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    margin: auto 0;
+}

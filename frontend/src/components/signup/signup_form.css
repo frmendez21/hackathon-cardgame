@@ -1,0 +1,35 @@
+.signup-form, .login-form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input[type='text'], input[type='password']{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+button {
+    width: 25%;
+    margin: 5px auto;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#error {
+    color: red;
+    text-align: center;
+}

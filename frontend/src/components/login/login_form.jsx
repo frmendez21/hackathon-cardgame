@@ -26,11 +26,11 @@ const LoginForm = ({errors, login}) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" onChange={e => update(e, 'email')}placeholder="email" />
-            {errorState.email && errorState.email}
-            <input type="text" onChange={e => update(e, 'password')} placeholder="password"/>
-            {errorState.password && errorState.password}
+        <form className="login-form" onSubmit={handleSubmit}>
+            <input type="text" onChange={e => update(e, 'email')} autoComplete="username" placeholder="email" />
+            {errorState.email && <p id="error">{errorState.email}</p> }
+            <input type="password" onChange={e => update(e, 'password')} autoComplete="current-password" placeholder="password"/>
+            {errorState.password && <p id="error">{errorState.password}</p>}
             <button type="submit">Submit</button>
         </form>
     )

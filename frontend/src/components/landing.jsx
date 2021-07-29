@@ -1,10 +1,11 @@
 import React from 'react';
 
+
 const Landing = () => {
 
     return(
-        <div>
-            <h1>CardGame</h1>
+        <div className="landing">
+            <div className="game-canvas"></div>
             <footer>
                 Copyright &copy; 2021 Frank Mendez
             </footer>
