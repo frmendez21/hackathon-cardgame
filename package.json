@@ -22,10 +22,6 @@
   },
   "homepage": "https://github.com/frmendez21/hackathon-cardgame#readme",
   "dependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8",
-    "@babel/preset-react": "^7.14.5",
-    "babel-loader": "^8.2.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^6.2.0",
@@ -34,9 +30,7 @@
     "mongoose": "^5.13.3",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "validator": "^13.6.0",
-    "webpack": "^5.47.1",
-    "webpack-cli": "^4.7.2"
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
